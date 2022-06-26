@@ -1,0 +1,33 @@
+GET http://localhost:5000/users
+
+###
+
+GET http://localhost:5000/vendors/62a64915c8bd1f8ed218ae32
+
+###
+
+POST http://localhost:5000/vendors 
+Content-Type: application/json
+
+{
+    "email": "dhanniel21@gmail.com",
+    "name": "hanniel",
+    "location": "",
+    "phoneno": "08071368211"
+}
+
+###
+
+DELETE http://localhost:5000/vendors/62a870400212e1a67c085552
+
+###
+
+PATCH  http://localhost:5000/vendors/62a870400212e1a67c085552
+Content-Type: application/json
+
+{
+    "email": "dhanniel21@gmail.com",
+    "name": "hanniel",
+    "phoneno": "08071368211",
+    "location": "hello" 
+}
