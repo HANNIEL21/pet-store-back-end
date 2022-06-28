@@ -15,7 +15,9 @@ connectDB;
 
 
 app.get("/", (req, res) => {
-    res.send("hello world")
+    res.json({
+        message: "Welcome to pet api_V1"
+    })
 })
 
 // Middleware
