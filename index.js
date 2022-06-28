@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 connectDB;
 
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
     res.json({
         message: "Welcome to pet api_V1"
     })
@@ -23,8 +23,9 @@ app.get("/", (req, res) => {
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use("/users", users)
-app.use("/vendors", vendors)
+
+app.use("/api/users", users)
+app.use("/api/vendors", vendors)
 
 
 

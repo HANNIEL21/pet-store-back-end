@@ -4,6 +4,7 @@ const User = require("../models/User")
 
 // controllers
 const createUserController = require("../controllers/User");
+const loginUserController = require("../controllers/User");
 const getUserController = require("../controllers/User");
 const getUsersController = require("../controllers/User");
 const updatedUserController = require("../controllers/User");
@@ -15,7 +16,10 @@ const getUser = require("../middleware/user");
 /* ================= ======================= ======================= */ 
 
 // creating a user
-userRouter.post("/", createUserController.createUser);
+userRouter.post("/register", createUserController.createUser);
+
+// login a user
+userRouter.post("/login", loginUserController.LoginUser);
 
 // Getting all users
 userRouter.get("/", getUsersController.getUsers);
