@@ -24,8 +24,8 @@ app.get("/api", (req, res) => {
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/users", users)
-app.use("/api/vendors", vendors)
+app.use("/users", users)
+app.use("/vendors", vendors)
 
 
 
