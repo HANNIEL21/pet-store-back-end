@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 connectDB;
 
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
     res.json({
         message: "Welcome to pet api_V1"
     })
